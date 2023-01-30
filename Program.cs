@@ -13,16 +13,15 @@ namespace App.Env
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-            var config = new ConfigurationBuilder().AddCommandLine(args).Build();
+            CreateHostBuilder(args).Build().Run();
+            //var config = new ConfigurationBuilder().AddCommandLine(args).Build();
+            //var host = new WebHostBuilder()
+            //    .UseConfiguration(config)
+            //    .UseKestrel()
+            //    .UseStartup<Startup>()
+            //    .Build();
 
-            var host = new WebHostBuilder()
-                .UseConfiguration(config)
-                .UseKestrel()
-                .UseStartup<Startup>()
-                .Build();
-
-            host.Run();
+            //host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
